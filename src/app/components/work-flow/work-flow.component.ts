@@ -1,6 +1,3 @@
-
-
-
 import { Component, ElementRef, OnInit } from '@angular/core';
 
 import { StencilService } from '../../services/servicesRappid/stencil-service';

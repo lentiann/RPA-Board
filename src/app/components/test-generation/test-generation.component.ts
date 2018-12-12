@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-generation.component.css']
 })
 export class TestGenerationComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {

@@ -83,9 +83,12 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
     }
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1620px) {
     .joint-app.joint-theme-modern .toolbar-container {
         overflow-y: auto;
+        height: 250%;
+        background-color: #f6f6f6;
+        
     }
 
     .joint-toolbar.joint-theme-modern {
@@ -100,6 +103,8 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
         height: -moz-calc(100% - 92px);
         height: -webkit-calc(100% - 92px);
         height: calc(100% - 92px);
+        height: calc(100% - 92px);
+        top: 15%;
     }
 }
 

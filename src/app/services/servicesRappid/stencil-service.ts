@@ -35,10 +35,10 @@ export class StencilService {
                     cellViewNamespace: appShapes
                 };
             },
-            search: {
-                '*': ['type', 'attrs/text/text', 'attrs/.label/text'],
-                'org.Member': ['attrs/.rank/text', 'attrs/.name/text']
-            },
+            // search: {
+            //     '*': ['type', 'attrs/text/text', 'attrs/.label/text'],
+            //     'org.Member': ['attrs/.rank/text', 'attrs/.name/text']
+            // },
             // Use default Grid Layout
             layout: true,
             // Remove tooltip definition from clone
@@ -52,12 +52,12 @@ export class StencilService {
 
     getStencilGroups() {
         return <{ [key: string]: ui.Stencil.Group }>{
-            standard: { index: 1, label: 'Standard shapes' },
-            fsa: { index: 2, label: 'State machine' },
-            pn: { index: 3, label: 'Petri nets' },
-            erd: { index: 4, label: 'Entity-relationship' },
-            uml: { index: 5, label: 'UML' },
-            org: { index: 6, label: 'ORG' }
+            standard: { index: 1, label: 'Shapes' },
+            // fsa: { index: 2, label: 'State machine' },
+            // pn: { index: 3, label: 'Petri nets' },
+            // erd: { index: 4, label: 'Entity-relationship' },
+            // uml: { index: 5, label: 'UML' },
+            // org: { index: 6, label: 'ORG' }
         };
     }
 
@@ -120,74 +120,74 @@ export class StencilService {
                         }
                     }
                 },
-                {
-                    type: 'app.RectangularModel',
-                    size: { width: 40, height: 30 },
-                    allowOrthogonalResize: false,
-                    attrs: {
-                        root: {
-                            dataTooltip: 'Rectangle with ports',
-                            dataTooltipPosition: 'left',
-                            dataTooltipPositionSelector: '.joint-stencil'
-                        },
-                        body: {
-                            fill: 'transparent',
-                            rx: 2,
-                            ry: 2,
-                            stroke: '#31d0c6',
-                            strokeWidth: 2,
-                            strokeDasharray: '0'
-                        },
-                        label: {
-                            text: 'rect',
-                            fill: '#c6c7e2',
-                            fontFamily: 'Roboto Condensed',
-                            fontWeight: 'Normal',
-                            fontSize: 11,
-                            strokeWidth: 0
-                        }
-                    },
-                    ports: {
-                        items: [
-                            { group: 'in' },
-                            { group: 'in' },
-                            { group: 'out' }
-                        ]
-                    }
-                },
-                {
-                    type: 'app.CircularModel',
-                    size: { width: 5, height: 3 },
-                    allowOrthogonalResize: false,
-                    attrs: {
-                        root: {
-                            dataTooltip: 'Ellipse with ports',
-                            dataTooltipPosition: 'left',
-                            dataTooltipPositionSelector: '.joint-stencil'
-                        },
-                        body: {
-                            fill: 'transparent',
-                            stroke: '#31d0c6',
-                            strokeWidth: 2,
-                            strokeDasharray: '0',
-                        },
-                        label: {
-                            text: 'ellipse',
-                            fill: '#c6c7e2',
-                            fontFamily: 'Roboto Condensed',
-                            fontWeight: 'Normal',
-                            fontSize: 11,
-                            strokeWidth: 0
-                        }
-                    },
-                    ports: {
-                        items: [
-                            { group: 'in' },
-                            { group: 'in' },
-                            { group: 'out' }
-                        ]
-                    }
-                },
+                // {
+                //     type: 'app.RectangularModel',
+                //     size: { width: 40, height: 30 },
+                //     allowOrthogonalResize: false,
+                //     attrs: {
+                //         root: {
+                //             dataTooltip: 'Rectangle with ports',
+                //             dataTooltipPosition: 'left',
+                //             dataTooltipPositionSelector: '.joint-stencil'
+                //         },
+                //         body: {
+                //             fill: 'transparent',
+                //             rx: 2,
+                //             ry: 2,
+                //             stroke: '#31d0c6',
+                //             strokeWidth: 2,
+                //             strokeDasharray: '0'
+                //         },
+                //         label: {
+                //             text: 'rect',
+                //             fill: '#c6c7e2',
+                //             fontFamily: 'Roboto Condensed',
+                //             fontWeight: 'Normal',
+                //             fontSize: 11,
+                //             strokeWidth: 0
+                //         }
+                //     },
+                //     ports: {
+                //         items: [
+                //             { group: 'in' },
+                //             { group: 'in' },
+                //             { group: 'out' }
+                //         ]
+                //     }
+                // },
+                // {
+                //     type: 'app.CircularModel',
+                //     size: { width: 5, height: 3 },
+                //     allowOrthogonalResize: false,
+                //     attrs: {
+                //         root: {
+                //             dataTooltip: 'Ellipse with ports',
+                //             dataTooltipPosition: 'left',
+                //             dataTooltipPositionSelector: '.joint-stencil'
+                //         },
+                //         body: {
+                //             fill: 'transparent',
+                //             stroke: '#31d0c6',
+                //             strokeWidth: 2,
+                //             strokeDasharray: '0',
+                //         },
+                //         label: {
+                //             text: 'ellipse',
+                //             fill: '#c6c7e2',
+                //             fontFamily: 'Roboto Condensed',
+                //             fontWeight: 'Normal',
+                //             fontSize: 11,
+                //             strokeWidth: 0
+                //         }
+                //     },
+                //     ports: {
+                //         items: [
+                //             { group: 'in' },
+                //             { group: 'in' },
+                //             { group: 'out' }
+                //         ]
+                //     }
+                // },
                 {
                     type: 'standard.Polygon',
                     size: { width: 5, height: 3 },
@@ -214,197 +214,197 @@ export class StencilService {
                         }
                     }
                 },
-                {
-                    type: 'standard.Cylinder',
-                    size: { width: 5, height: 3 },
-                    attrs: {
-                        root: {
-                            dataTooltip: 'Cylinder',
-                            dataTooltipPosition: 'left',
-                            dataTooltipPositionSelector: '.joint-stencil'
-                        },
-                        body: {
-                            fill: 'transparent',
-                            stroke: '#31d0c6',
-                            strokeWidth: 2,
-                            strokeDasharray: '0'
-                        },
-                        top: {
-                            fill: '#31d0c6',
-                            stroke: '#31d0c6',
-                            strokeWidth: 2,
-                            strokeDasharray: '0'
-                        },
-                        label: {
-                            text: 'cylinder',
-                            fill: '#c6c7e2',
-                            fontFamily: 'Roboto Condensed',
-                            fontWeight: 'Normal',
-                            fontSize: 11,
-                            strokeWidth: 0
-                        }
-                    }
-                },
-                {
-                    type: 'standard.Image',
-                    size: { width: 53, height: 42 },
-                    attrs: {
-                        root: {
-                            dataTooltip: 'Image',
-                            dataTooltipPosition: 'left',
-                            dataTooltipPositionSelector: '.joint-stencil'
-                        },
-                        image: {
-                            xlinkHref: 'assets/image-icon1.svg'
-                        },
-                        body: {
-                            fill: 'transparent',
-                            stroke: '#31d0c6',
-                            strokeWidth: 2,
-                            strokeDasharray: '0'
-                        },
-                        label: {
-                            text: 'image',
-                            fontFamily: 'Roboto Condensed',
-                            fontWeight: 'Normal',
-                            fontSize: 11,
-                            fill: '#c6c7e2'
-                        }
-                    }
-                },
-                {
-                    type: 'standard.EmbeddedImage',
-                    size: { width: 5, height: 3 },
-                    attrs: {
-                        root: {
-                            dataTooltip: 'Card',
-                            dataTooltipPosition: 'left',
-                            dataTooltipPositionSelector: '.joint-stencil'
-                        },
-                        body: {
-                            fill: 'transparent',
-                            stroke: '#31d0c6',
-                            strokeWidth: 2,
-                            strokeDasharray: '0'
-                        },
-                        image: {
-                            xlinkHref: 'assets/image-icon1.svg'
-                        },
-                        label: {
-                            text: 'card',
-                            fill: '#c6c7e2',
-                            fontFamily: 'Roboto Condensed',
-                            fontWeight: 'Normal',
-                            fontSize: 11,
-                            strokeWidth: 0
-                        }
-                    }
-                },
-                {
-                    type: 'standard.InscribedImage',
-                    size: { width: 1, height: 1 },
-                    attrs: {
-                        root: {
-                            dataTooltip: 'Icon',
-                            dataTooltipPosition: 'left',
-                            dataTooltipPositionSelector: '.joint-stencil'
-                        },
-                        border: {
-                            stroke: '#31d0c6',
-                            strokeWidth: 3,
-                            strokeDasharray: '0'
-                        },
-                        background: {
-                            fill: 'transparent'
-                        },
-                        image: {
-                            xlinkHref: 'assets/image-icon1.svg'
-                        },
-                        label: {
-                            text: 'icon',
-                            fill: '#c6c7e2',
-                            fontFamily: 'Roboto Condensed',
-                            fontWeight: 'Normal',
-                            fontSize: 11,
-                            strokeWidth: 0
-                        }
-                    }
-                },
-                {
-                    type: 'standard.HeaderedRectangle',
-                    size: { width: 5, height: 3 },
-                    attrs: {
-                        root: {
-                            dataTooltip: 'Rectangle with header',
-                            dataTooltipPosition: 'left',
-                            dataTooltipPositionSelector: '.joint-stencil'
-                        },
-                        body: {
-                            fill: 'transparent',
-                            stroke: '#31d0c6',
-                            strokeWidth: 2,
-                            strokeDasharray: '0'
-                        },
-                        header: {
-                            stroke: '#31d0c6',
-                            fill: '#31d0c6',
-                            strokeWidth: 2,
-                            strokeDasharray: '0',
-                            height: 20
-                        },
-                        bodyText: {
-                            textWrap: {
-                                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie.',
-                                width: -10,
-                                height: -20,
-                                ellipsis: true
-                            },
-                            fill: '#c6c7e2',
-                            fontFamily: 'Roboto Condensed',
-                            fontWeight: 'Normal',
-                            fontSize: 11,
-                            strokeWidth: 0,
-                            refY2: 12,
-                        },
-                        headerText: {
-                            text: 'header',
-                            fill: '#f6f6f6',
-                            fontFamily: 'Roboto Condensed',
-                            fontWeight: 'Normal',
-                            fontSize: 11,
-                            strokeWidth: 0,
-                            refY: 12
-                        }
-                    }
-                }
-            ],
-            fsa: [
+                // {
+                //     type: 'standard.Cylinder',
+                //     size: { width: 5, height: 3 },
+                //     attrs: {
+                //         root: {
+                //             dataTooltip: 'Cylinder',
+                //             dataTooltipPosition: 'left',
+                //             dataTooltipPositionSelector: '.joint-stencil'
+                //         },
+                //         body: {
+                //             fill: 'transparent',
+                //             stroke: '#31d0c6',
+                //             strokeWidth: 2,
+                //             strokeDasharray: '0'
+                //         },
+                //         top: {
+                //             fill: '#31d0c6',
+                //             stroke: '#31d0c6',
+                //             strokeWidth: 2,
+                //             strokeDasharray: '0'
+                //         },
+                //         label: {
+                //             text: 'cylinder',
+                //             fill: '#c6c7e2',
+                //             fontFamily: 'Roboto Condensed',
+                //             fontWeight: 'Normal',
+                //             fontSize: 11,
+                //             strokeWidth: 0
+                //         }
+                //     }
+                // },
+                // {
+                //     type: 'standard.Image',
+                //     size: { width: 53, height: 42 },
+                //     attrs: {
+                //         root: {
+                //             dataTooltip: 'Image',
+                //             dataTooltipPosition: 'left',
+                //             dataTooltipPositionSelector: '.joint-stencil'
+                //         },
+                //         image: {
+                //             xlinkHref: 'assets/image-icon1.svg'
+                //         },
+                //         body: {
+                //             fill: 'transparent',
+                //             stroke: '#31d0c6',
+                //             strokeWidth: 2,
+                //             strokeDasharray: '0'
+                //         },
+                //         label: {
+                //             text: 'image',
+                //             fontFamily: 'Roboto Condensed',
+                //             fontWeight: 'Normal',
+                //             fontSize: 11,
+                //             fill: '#c6c7e2'
+                //         }
+                //     }
+                // },
+                // {
+                //     type: 'standard.EmbeddedImage',
+                //     size: { width: 5, height: 3 },
+                //     attrs: {
+                //         root: {
+                //             dataTooltip: 'Card',
+                //             dataTooltipPosition: 'left',
+                //             dataTooltipPositionSelector: '.joint-stencil'
+                //         },
+                //         body: {
+                //             fill: 'transparent',
+                //             stroke: '#31d0c6',
+                //             strokeWidth: 2,
+                //             strokeDasharray: '0'
+                //         },
+                //         image: {
+                //             xlinkHref: 'assets/image-icon1.svg'
+                //         },
+                //         label: {
+                //             text: 'card',
+                //             fill: '#c6c7e2',
+                //             fontFamily: 'Roboto Condensed',
+                //             fontWeight: 'Normal',
+                //             fontSize: 11,
+                //             strokeWidth: 0
+                //         }
+                //     }
+                // },
+                // {
+                //     type: 'standard.InscribedImage',
+                //     size: { width: 1, height: 1 },
+                //     attrs: {
+                //         root: {
+                //             dataTooltip: 'Icon',
+                //             dataTooltipPosition: 'left',
+                //             dataTooltipPositionSelector: '.joint-stencil'
+                //         },
+                //         border: {
+                //             stroke: '#31d0c6',
+                //             strokeWidth: 3,
+                //             strokeDasharray: '0'
+                //         },
+                //         background: {
+                //             fill: 'transparent'
+                //         },
+                //         image: {
+                //             xlinkHref: 'assets/image-icon1.svg'
+                //         },
+                //         label: {
+                //             text: 'icon',
+                //             fill: '#c6c7e2',
+                //             fontFamily: 'Roboto Condensed',
+                //             fontWeight: 'Normal',
+                //             fontSize: 11,
+                //             strokeWidth: 0
+                //         }
+                //     }
+                // },
+            //     {
+            //         type: 'standard.HeaderedRectangle',
+            //         size: { width: 5, height: 3 },
+            //         attrs: {
+            //             root: {
+            //                 dataTooltip: 'Rectangle with header',
+            //                 dataTooltipPosition: 'left',
+            //                 dataTooltipPositionSelector: '.joint-stencil'
+            //             },
+            //             body: {
+            //                 fill: 'transparent',
+            //                 stroke: '#31d0c6',
+            //                 strokeWidth: 2,
+            //                 strokeDasharray: '0'
+            //             },
+            //             header: {
+            //                 stroke: '#31d0c6',
+            //                 fill: '#31d0c6',
+            //                 strokeWidth: 2,
+            //                 strokeDasharray: '0',
+            //                 height: 20
+            //             },
+            //             bodyText: {
+            //                 textWrap: {
+            //                     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie.',
+            //                     width: -10,
+            //                     height: -20,
+            //                     ellipsis: true
+            //                 },
+            //                 fill: '#c6c7e2',
+            //                 fontFamily: 'Roboto Condensed',
+            //                 fontWeight: 'Normal',
+            //                 fontSize: 11,
+            //                 strokeWidth: 0,
+            //                 refY2: 12,
+            //             },
+            //             headerText: {
+            //                 text: 'header',
+            //                 fill: '#f6f6f6',
+            //                 fontFamily: 'Roboto Condensed',
+            //                 fontWeight: 'Normal',
+            //                 fontSize: 11,
+            //                 strokeWidth: 0,
+            //                 refY: 12
+            //             }
+            //         }
+            //     }
+            // ],
+            // fsa: [
 
-                {
-                    type: 'fsa.StartState',
-                    preserveAspectRatio: true,
-                    attrs: {
-                        root: {
-                            dataTooltip: 'Start State',
-                            dataTooltipPosition: 'left',
-                            dataTooltipPositionSelector: '.joint-stencil'
-                        },
-                        circle: {
-                            width: 50,
-                            height: 30,
-                            fill: '#61549c',
-                            'stroke-width': 0
-                        },
-                        text: {
-                            text: 'startState',
-                            fill: '#c6c7e2',
-                            'font-family': 'Roboto Condensed',
-                            'font-weight': 'Normal',
-                            'font-size': 11,
-                            'stroke-width': 0
-                        }
-                    }
-                },
+            //     {
+            //         type: 'fsa.StartState',
+            //         preserveAspectRatio: true,
+            //         attrs: {
+            //             root: {
+            //                 dataTooltip: 'Start State',
+            //                 dataTooltipPosition: 'left',
+            //                 dataTooltipPositionSelector: '.joint-stencil'
+            //             },
+            //             circle: {
+            //                 width: 50,
+            //                 height: 30,
+            //                 fill: '#61549c',
+            //                 'stroke-width': 0
+            //             },
+            //             text: {
+            //                 text: 'startState',
+            //                 fill: '#c6c7e2',
+            //                 'font-family': 'Roboto Condensed',
+            //                 'font-weight': 'Normal',
+            //                 'font-size': 11,
+            //                 'stroke-width': 0
+            //             }
+            //         }
+            //     },
                 {
                     type: 'fsa.EndState',
                     preserveAspectRatio: true,

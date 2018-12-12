@@ -13,11 +13,11 @@ file, You can obtain one at http://jointjs.com/license/rappid_v2.txt
 
 import * as joint from '../../../vendor/rappid';
 import * as _ from 'lodash';
-import {StencilService} from './stencil-service';
-import {ToolbarService} from './toolbar-service';
-import {InspectorService} from './inspector-service';
-import {HaloService} from './halo-service';
-import {KeyboardService} from './keyboard-service';
+import { StencilService } from './stencil-service';
+import { ToolbarService } from './toolbar-service';
+import { InspectorService } from './inspector-service';
+import { HaloService } from './halo-service';
+import { KeyboardService } from './keyboard-service';
 import * as appShapes from '../../../shapes/app-shapes';
 
 class KitchenSinkService {
@@ -267,6 +267,11 @@ class KitchenSinkService {
                 fileName: 'Rappid'
             }).open();
         }, { padding: 10 });
+        this.test();
+    }
+
+    test() {
+        console.log('test');
     }
 
     onMousewheel(cellView: joint.dia.CellView, evt: JQuery.Event, ox: number, oy: number, delta: number) {

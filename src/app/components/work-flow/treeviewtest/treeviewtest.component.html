@@ -1,0 +1,17 @@
+<div class="example-config">
+        Selected keys: {{selectedKeys.join(",")}}
+    </div>
+    <kendo-treeview
+        [nodes]="data"
+        textField="text"
+        [hasChildren]="hasChildren"
+        [children]="fetchChildren"
+
+        kendoTreeViewExpandable
+        [expandedKeys]="expandedKeys"
+
+        [kendoTreeViewSelectable]="selection"
+        [(selectedKeys)]="selectedKeys"
+    >
+    </kendo-treeview>
+<button (click)="test()">Click me</button>
